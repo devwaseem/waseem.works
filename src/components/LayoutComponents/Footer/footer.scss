@@ -1,0 +1,134 @@
+@import '../../../styles/defaults';
+
+.footer-container {
+
+    border-top: 0.4px solid;
+    border-bottom: 0.4px solid;
+    border-color: rgba($royalGray, 0.13);
+    padding-top: 4em;
+    padding-bottom: 4em;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-author-section {
+    padding-left: 6em;
+    padding-right: 6em;
+    padding-bottom: 4em;
+
+    @include xs {
+        padding-left: 4em;
+        padding-right: 2em;
+    }
+}
+
+// .footer-author-name {
+//     font-family: 'NeutrifStudio-ExtraBold';
+//     font-size: 2em;
+//     color: $shellWhite
+// }
+
+.footer-author-description {
+    font-family: 'NeutrifStudio-Regular', Sans-Serif;
+    font-size: 48px;
+    color: $shellWhite;
+    padding: 0;
+    margin: 0;
+    line-height: 88px;
+
+    @include  md {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    @include  lt-md {
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    &-highlight {
+        display: inline-block;
+        @extend .footer-author-description;
+        font-family: 'NeutrifStudio-Bold', Sans-Serif;
+    }
+}
+
+.footer-rights {
+    font-family: 'NeutrifStudio-Regular', Sans-Serif;
+    font-size: 1em;
+    padding: 4em;
+    margin: 0;
+    color: $royalGray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        @include lt-md {
+            margin-bottom: 2em;
+        }
+    }
+}
+
+.footer-links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    
+}
+
+.footer-link-section {
+    margin-left: 6em;
+    margin-bottom: 4em;
+
+    @include xs {
+        margin-left: 4em;
+        width: 100%;
+    }
+    
+    font-family: 'NeutrifStudio-Regular', Sans-Serif;
+    font-size: 1em;
+
+    span {
+        font-family: 'RobotoMono-Bold', Sans-Serif;
+    }
+
+    a {
+        color: $royalGray;
+    }
+
+    div {
+        margin-top: 1em;
+        color: $royalGray;
+    }
+
+    .active {
+        color: $shellWhite;
+    }
+}
+
+
+.footer-social-section {
+
+    .LinkIcon {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 0;
+        margin-left: 8px;
+    }
+}
+
+.footer-scroll-button {
+    background: url('../../../images/scrollToTop.svg');
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-self: flex-end;
+}
+
+

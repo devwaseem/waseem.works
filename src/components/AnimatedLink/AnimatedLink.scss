@@ -1,0 +1,9 @@
+@import '../../styles/defaults';
+
+
+.animated-link-text {
+    color: $accentColor !important;
+    cursor: pointer;
+    font-family: Inter-SemiBold;
+    height: 34px
+}

@@ -1,16 +1,38 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `waseem.works`,
+    description: `iOS Developer portfolio`,
+    author: `@iamwaseem99`,
+    email: `hello@waseem.works`,
+    social: {
+      Github: `https://github.com/devwaseem`,
+      Twitter: `https://twitter.com/iamwaseem99`,
+      LinkedIn: `https://www.linkedin.com/in/devwaseem/`,
+      Instagram: `https://www.instagram.com/dvlp.er/`,
+      Facebook: `https://www.facebook.com/dvlprwaseem`,
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `works`,
+        path: `${__dirname}/src/works/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -27,6 +49,8 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

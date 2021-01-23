@@ -1,0 +1,44 @@
+@import '../../styles/defaults.scss';
+
+.cursor-inner {
+    width: 10px;
+    height: 10px;
+    background-color: $royalBlue;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    pointer-events: none;
+    transition: all 150ms ease;
+    mix-blend-mode: lighten;
+    z-index: 9999;
+    transition-property:  opacity, background-color, transform, mix-blend-mode;
+}
+
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 2px solid $royalBlue;
+    border-radius: 100%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: lighten;
+    transition: all 150ms ease;
+    transition-property:  opacity, background-color, transform, mix-blend-mode;
+}
+
+.cursor--hidden {
+    opacity: 0;
+}
+
+.cursor--clicked {
+    transform: translate(-50%, -50%) scale(0.9);
+    background-color: $royalBlue;
+}
+
+.cursor--link-hovered {
+    transform: translate(-50%, -50%) scale(2);
+    background-color: $royalBlue;
+    border: 2px solid $royalBlue;
+}
