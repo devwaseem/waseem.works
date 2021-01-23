@@ -219,6 +219,18 @@ const Layout = ({ children }) => {
     {name: "Contact", path: "/contact"}
   ]
 
+
+  const [hasMounted, setHasMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  //prevent react rehydration bug
+  if (!hasMounted) { 
+    return null;
+  }
+
   const location = useLocation()
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
