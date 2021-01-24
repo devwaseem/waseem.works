@@ -1,0 +1,101 @@
+@import '../../../styles/defaults.scss';
+
+.topNav-container {
+    background: $royalBlack;
+    position: relative;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 12%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    z-index: 99;
+
+    @include lt-sm {
+        margin-left: 0px;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    
+    .logo {
+        width: 15%;
+        height: 55%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.topNav-inner-container {
+    margin: 0px 6em;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include lt-sm {
+        margin: 0px 2em;
+    }
+
+    .title {
+      font-family: "Neutrif Studio", Sans-Serif;  
+      font-weight: bold;
+      font-size: 18px;
+      color: $shellWhite
+    }
+
+    .link {
+        font-family: "Neutrif Studio", Sans-Serif;  
+        font-weight: bold;
+        font-size: 16px;
+        color: $royalGray;
+        margin-left: 60px;
+    }
+
+    .menu {
+        padding: 30px 24px;
+        width: 30px;
+        transition: transform 200ms;
+    }
+
+    
+}
+
+.topNav-link-container {
+    position: fixed;
+    margin-top: 84px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $royalBlack;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    border-right: 0.5px rgba($color: $royalGray, $alpha: 0.13) solid;
+    div {
+        margin-top: -160px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        p {
+            margin-right: 1.5em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            font-family: "Neutrif Studio", Sans-Serif;  
+            font-weight: bold;
+            font-size: 1.5em;
+            color: $shellWhite;
+        }
+    }
+}

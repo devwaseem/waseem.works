@@ -1,17 +1,14 @@
 import React, { useState, useEffect } from "react"
-import Layout from "../components/layout"
 import { Link } from "gatsby"
+import { motion } from 'framer-motion'
 import '../styles/index.scss'
 const IndexPage = () =>  {
 
 
   return (
-    <Layout>
-      <div style={{height: '1000px'}}>
-      
-      <a>Hello</a>
-      </div>
-    </Layout>
+      <motion.div style={{height: '1000px'}}>
+        <h1>Home</h1>
+      </motion.div>
   )
 }
 
