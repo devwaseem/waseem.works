@@ -3,7 +3,6 @@ import { Link, navigate } from "gatsby"
 import {motion} from 'framer-motion'
 import MenuButton from '../../MenuButton'
 import disableScroll from 'disable-scroll';
-import {isMobileOnly, isMobile} from 'react-device-detect';
 
 // images
 import Logo from '../../../images/logo.svg'
@@ -11,8 +10,7 @@ import Logo from '../../../images/logo.svg'
 import './styles.scss'
 
 const LeftNavContainer = ({navBarLinks}) => {
-    const expandAnimation = {width:'100%'}
-    const collapseAnimation = {width: '12%'}
+    
   
     const [isMenuExpanded, setMenuExpanded] = useState(false);
     const [menuVisibility, setMenuVisibility] = useState('hidden');
@@ -62,9 +60,23 @@ const LeftNavContainer = ({navBarLinks}) => {
         }
       }
     }
+
+    const navVariant = {
+      expand: {
+        width:'100%',
+      },
+      collapse: {
+        width: '12%',
+      }
+    }
   
     return (
-      <motion.div className="leftNav" animate={isMenuExpanded ? expandAnimation: collapseAnimation} transition={{delay: isMenuExpanded ? 0 : 1.2, type: 'tween'}}>
+      <motion.div 
+          className="leftNav" 
+          variants={navVariant} 
+          animate={isMenuExpanded ? "expand": "collapse"} 
+          transition={{delay: isMenuExpanded ? 0 : 1.2, type: 'tween'}}
+          >
             <motion.div className="leftNav-link-container" >
                 {
                   navBarLinks.map((link, index) => {

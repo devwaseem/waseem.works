@@ -1,2 +1,47 @@
 @import '../styles/defaults';
 
+.home-space {
+    margin-top: 8vh;
+
+    @include lt-md {
+        margin-top: 4vh;
+    }
+}
+
+.home-intro {
+    font-family: 'RobotoMono';
+    
+}
+
+.home-title {
+    font-size: 64px;
+    font-weight: 200;
+    line-height: 100px;
+    color: $shellWhite;
+
+    @include lt-md {
+        font-size: 34px;
+        line-height: 60px;
+    }
+
+
+    span {
+        @extend .home-title;
+    }
+
+    .shady {
+        // color: rgba($color: $royalBlue, $alpha: 0.2);
+        color: #31383C;
+    }
+
+    &-name {
+        font-weight: 200;
+        font-size: 32px;
+        line-height: 80px;
+
+        @include lt-md {
+            font-size: 16px;
+            line-height: 60px;
+        }
+    }
+}

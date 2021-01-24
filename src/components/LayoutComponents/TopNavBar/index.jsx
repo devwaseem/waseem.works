@@ -52,13 +52,11 @@ const TopNavBar = ({navBarLinks}) => {
     const linkVariants = {
         open: {
             opacity: 1, 
-            rotate: 0,
             y: '0px',
         },
 
         closed: {
-            opacity: 0, 
-            rotate: -5,
+            opacity: 0,
             y: '24px',
         }
     }

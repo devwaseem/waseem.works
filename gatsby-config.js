@@ -4,11 +4,12 @@ module.exports = {
     description: `iOS Developer portfolio`,
     author: `@iamwaseem99`,
     email: `hello@waseem.works`,
+    phone: `+918248899344`,
     social: {
-      Github: `https://github.com/devwaseem`,
-      Twitter: `https://twitter.com/iamwaseem99`,
-      LinkedIn: `https://www.linkedin.com/in/devwaseem/`,
-      Instagram: `https://www.instagram.com/dvlp.er/`,
+      github: `https://github.com/devwaseem`,
+      twitter: `https://twitter.com/iamwaseem99`,
+      linkedin: `https://www.linkedin.com/in/devwaseem/`,
+      instagram: `https://www.instagram.com/dvlp.er/`,
       Facebook: `https://www.facebook.com/dvlprwaseem`,
     }
   },

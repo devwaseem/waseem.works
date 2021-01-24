@@ -6,7 +6,7 @@ const ContactPage = () =>  {
 
   return (
       <div style={{height: '1000px'}}>
-      <a>Contact</a>
+      <a>Contact | Site under Construction :P</a>
       </div>
   )
 }

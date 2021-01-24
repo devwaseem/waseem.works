@@ -7,7 +7,6 @@
 
 import React, {useState, useEffect} from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import SEO from '../components/seo'
 import { Link, navigate } from "gatsby"
 import Cursor from '../components/Cursor'
@@ -40,15 +39,6 @@ const Layout = ({children, location }) => {
   location.key = ""
   const [hasMounted, setHasMounted] = React.useState(false);
   // const location = useLocation()
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   React.useEffect(() => {
     setHasMounted(true);

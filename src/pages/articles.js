@@ -9,7 +9,7 @@ const ArticlesPage = () =>  {
     
       <div style={{height: '1000px'}}>
       
-      <a>Articles</a>
+      <a>Articles | Site under Construction :P</a>
       </div>
     
   )

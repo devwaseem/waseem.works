@@ -2,27 +2,30 @@ import React from 'react'
 import {Link} from 'gatsby'
 import './footer.scss'
 import {motion} from 'framer-motion'
-
-const LinkIcon = ()=> {
-    return (
-    <div className="LinkIcon">
-    <svg class="flex-shrink-0 w-4 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path 
-            stroke-linecap="round" 
-            stroke-linejoin="round" 
-            stroke-width="2" 
-            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-            >
-        </path>
-    </svg>
-    </div>
-    )
-    
-}
-
+import { useStaticQuery, graphql } from "gatsby"
 
 const Footer = ({currentPath, navBarLinks})=> {
 
+
+    const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+        email,
+        phone
+        social {
+            github
+            twitter
+            linkedin
+            instagram
+          }
+        }
+      }
+    }
+  `)
+
+  const { email, phone } = data.site.siteMetadata
+  const { github, instagram, linkedin, twitter } = data.site.siteMetadata.social
 
     return (
         <footer>
@@ -51,16 +54,16 @@ const Footer = ({currentPath, navBarLinks})=> {
 
                 <section className="footer-link-section footer-contact-section">
                     <span>Start a Conversation</span><br/>
-                    <div data-cursor-type="hover"><a href="mailto:hello@waseem.works">hello@waseem.works</a></div>
-                    <div data-cursor-type="hover"><a href="tel:+918248899344">+91 8248899344</a></div>
+                    <div data-cursor-type="hover"><a href={`mailto:${email}`}>{email}</a></div>
+                    <div data-cursor-type="hover"><a href={`tel:${phone}`}>{phone}</a></div>
                 </section>
 
                 <section className="footer-link-section footer-social-section">
                     <span>Social</span><br/>
-                    <div data-cursor-type="hover"><a href="/">Twitter</a></div>
-                    <div data-cursor-type="hover"><a href="/">LinkedIn</a></div>
-                    <div data-cursor-type="hover"><a href="/">Instagram</a></div>
-                    <div data-cursor-type="hover"><a href="/">Github</a></div>
+                    <div data-cursor-type="hover"><a href={twitter}>Twitter</a></div>
+                    <div data-cursor-type="hover"><a href={linkedin}>LinkedIn</a></div>
+                    <div data-cursor-type="hover"><a href={instagram}>Instagram</a></div>
+                    <div data-cursor-type="hover"><a href={github}>Github</a></div>
                 </section>
                 </div>
             </div>

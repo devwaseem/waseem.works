@@ -9,7 +9,7 @@ const AboutPage = () =>  {
     
       <div style={{height: '1000px'}}>
       
-      <a>About</a>
+      <a>About | Site under Construction :P</a>
       </div>
     
   )
