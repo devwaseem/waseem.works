@@ -9,7 +9,7 @@
     color: $shellWhite;
     cursor: none;
     text-decoration: none;
-    font-family: 'NeutrifStudio-Regular', Sans-Serif;
+    font-family: 'Neutrif Studio', Sans-Serif;
 
     &::-moz-selection { /* Code for Firefox */
         color: $shellWhite;
@@ -92,7 +92,8 @@ html {
         margin-top: 6%;
         a {
             text-decoration: none;
-            font-family: 'NeutrifStudio-ExtraBold', Sans-Serif;
+            font-family: 'Neutrif Studio', Sans-Serif;
+            font-weight: 800;
             color: $royalGray;
             font-size: 3rem;
         }
@@ -138,7 +139,8 @@ html {
         display: inline-block;
         width: 200px;
         color: $royalGray;
-        font-family: 'NeutrifStudio-Medium', Sans-Serif;
+        font-family: 'Neutrif Studio', Sans-Serif;
+        font-weight: 500;
         font-size: 14px;
     }
 }
@@ -208,13 +210,15 @@ html {
     }
 
     .title {
-      font-family: "NeutrifStudio-Bold", Sans-Serif;  
+      font-family: "Neutrif Studio", Sans-Serif;  
+      font-weight: bold;
       font-size: 18px;
       color: $shellWhite
     }
 
     .link {
-        font-family: "NeutrifStudio-Bold", Sans-Serif;  
+        font-family: "Neutrif Studio", Sans-Serif;  
+        font-weight: bold;
         font-size: 16px;
         color: $royalGray;
         margin-right: 24px;

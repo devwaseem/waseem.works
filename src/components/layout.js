@@ -221,16 +221,6 @@ const Layout = ({ children }) => {
 
 
   const [hasMounted, setHasMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setHasMounted(true);
-  }, []);
-
-  //prevent react rehydration bug
-  if (!hasMounted) { 
-    return null;
-  }
-
   const location = useLocation()
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -241,6 +231,18 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
+  React.useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  //prevent react rehydration bug
+  if (!hasMounted) { 
+    return null;
+  }
+
+  
+  
 
   const currentPath = ()=> {
     const {pathname} = location
@@ -257,23 +259,6 @@ const Layout = ({ children }) => {
       <SEO title={`Waseem. | ${currentPath()}`}/>
       { !isMobile && <Cursor/>}
       <div className="container">
-        {/*
-          {
-          isMobileOnly ? 
-          <TopNavBar 
-            isMenuExpanded={isMenuExpanded} 
-            setMenuExpanded={setMenuExpanded} 
-            navBarLinks={navBarLinks}
-          />
-          :
-          <LeftNavContainer 
-            isMenuExpanded={isMenuExpanded} 
-            setMenuExpanded={setMenuExpanded} 
-            navBarLinks={navBarLinks}
-          />
-        }
-        */}
-
           <TopNavBar 
             navBarLinks={navBarLinks}
           />

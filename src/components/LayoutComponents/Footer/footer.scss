@@ -29,7 +29,7 @@
 // }
 
 .footer-author-description {
-    font-family: 'NeutrifStudio-Regular', Sans-Serif;
+    font-family: 'Neutrif Studio', Sans-Serif;
     font-size: 48px;
     color: $shellWhite;
     padding: 0;
@@ -49,12 +49,13 @@
     &-highlight {
         display: inline-block;
         @extend .footer-author-description;
-        font-family: 'NeutrifStudio-Bold', Sans-Serif;
+        font-family: 'Neutrif Studio', Sans-Serif;
+        font-weight: bold;
     }
 }
 
 .footer-rights {
-    font-family: 'NeutrifStudio-Regular', Sans-Serif;
+    font-family: 'Neutrif Studio', Sans-Serif;
     font-size: 1em;
     padding: 4em;
     margin: 0;
@@ -89,11 +90,12 @@
         width: 100%;
     }
     
-    font-family: 'NeutrifStudio-Regular', Sans-Serif;
+    font-family: 'Neutrif Studio', Sans-Serif;
     font-size: 1em;
 
     span {
-        font-family: 'RobotoMono-Bold', Sans-Serif;
+        font-family: 'RobotoMono', Sans-Serif;
+        font-weight: bold;
     }
 
     a {
